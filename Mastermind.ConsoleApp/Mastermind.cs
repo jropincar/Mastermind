@@ -22,7 +22,7 @@ namespace Mastermind.ConsoleApp
             Console.WriteLine("Lets Play Mastermind!");
             Console.WriteLine($"In a moment, 4 random numbers between, and including, {_mastermindConfig.InclusiveLowerLimit} and {_mastermindConfig.ExclusiveUpperLimit - 1} will be chosen.");
             Console.WriteLine($"You have {_mastermindConfig.NumberOrGuesses} chances to get the sequence exactly right.");
-            var randomNumbers = "5656";
+            var randomNumbers = GetRandomNumbers();
             Console.WriteLine(randomNumbers);
             while (!gameOver && turnCounter < _mastermindConfig.NumberOrGuesses)
             {
